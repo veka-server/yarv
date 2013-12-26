@@ -7,6 +7,8 @@
 </head>
 <body>
 
+<div id="loaderImage"></div>
+
 <nav id='nav' class='hidden'>
 
 	<h1>YARV</h1>
@@ -41,8 +43,6 @@
 		</article>
 	{{/articles}}
 </div>
-
-<div id="loaderImage"></div>
 
 <script type="text/javascript" src='js/lib/jquery.js'></script>
 <script type="text/javascript" src='js/lib/mustache.js'></script>
