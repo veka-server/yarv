@@ -248,16 +248,18 @@ var debut = function()
 	});
 }
 
+// dissimule le message d'erreur pour le javascript desactivé
+$('#jsOFF').hide();
+
+// affiche le loader
+$('#loaderImage').show();
 
 var tableau_articles = []; 	// tableau contenant tout les articles
 var tableau_bouton = {}; 	// tableau contenant les pairs clé:valeur utiles pour la navigation
 var striptagsVar = '<i><b><a><div><p><img><strong><h1><h2><h3><h5><h6><iframe>';
 var page_curr = 'article';
 
+
 debut();
-
-
-console.log(JSON.parse(localStorage.getItem('lu')))
-
 
 });

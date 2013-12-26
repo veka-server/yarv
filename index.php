@@ -7,7 +7,9 @@
 </head>
 <body>
 
-<div id="loaderImage"></div>
+<div id="loaderImage" class='hidden'></div>
+
+<p id="jsOFF">Pour utiliser se site, veuillez activer le javascript.</p>
 
 <nav id='nav' class='hidden'>
 
@@ -37,7 +39,7 @@
 	{{#articles}}
 		<article class='{{class}}'>
 			<h1>{{title}}</h1>
-			<h2>{{date_humaine}} <a href="{{link}}">Voir la source chez {{site}}</a></h2>
+			<h2>{{date_humaine}} <a href="{{link}}" target='_blank'>Voir la source chez {{site}}</a></h2>
 			<div>{{{content}}}</div>
 			<input type='button' value='Marquer comme lu' class='boutonLu' id='{{hash}}'/>
 		</article>
