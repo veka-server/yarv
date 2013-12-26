@@ -1,29 +1,9 @@
-<?php
-// proxy php pour recuperer les flux
-if(isset($_GET['flux']))
-{
-	// Set your return content type
-	header('Content-type: application/xml');
-
-	// Get that website's content
-	$handle = fopen($_GET['flux'], "r");
-
-	// If there is something, read and return
-	if ($handle) {
-	    while (!feof($handle)) {
-	        $buffer = fgets($handle, 4096);
-	        echo $buffer;
-	    }
-	    fclose($handle);
-	}
-	die();
-}
-?>
+<?php include('php/proxy.php'); ?>
 <html>
 <head>
 	<title>YARV</title>
-		<meta charset="utf-8"/>
-		<link rel="stylesheet" type="text/css" href="defaut.css">
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css/defaut.css">
 </head>
 <body>
 
@@ -64,12 +44,12 @@ if(isset($_GET['flux']))
 
 <div id="loaderImage"></div>
 
-<script type="text/javascript" src='jquery.js'></script>
-<script type="text/javascript" src='mustache.js'></script>
-<script type="text/javascript" src='md5.js'></script>
-<script type="text/javascript" src='loader.js'></script>
-<script type="text/javascript" src='config.js'></script>
-<script type="text/javascript" src='app.js'></script>
+<script type="text/javascript" src='js/lib/jquery.js'></script>
+<script type="text/javascript" src='js/lib/mustache.js'></script>
+<script type="text/javascript" src='js/lib/md5.js'></script>
+<script type="text/javascript" src='js/loader.js'></script>
+<script type="text/javascript" src='js/config.js'></script>
+<script type="text/javascript" src='js/app.js'></script>
 
 </body>
 </html>
