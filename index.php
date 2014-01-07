@@ -4,6 +4,7 @@
 	<title>YARV</title>
 	<meta charset="utf-8"/>
 	<link rel="stylesheet" type="text/css" href="css/defaut.css">
+	<link rel="icon" href="images/rss.png" />
 </head>
 <body>
 
