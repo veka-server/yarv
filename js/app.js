@@ -1,5 +1,21 @@
 $(function() {
 
+function html_entity_decode(str) {
+    try {
+		var  tarea=document.createElement('textarea');
+		tarea.innerHTML = str; return tarea.value;
+		tarea.parentNode.removeChild(tarea);
+	} catch(e) {
+		//for IE add <div id="htmlconverter" style="display:none;"></div> to the page
+		document.getElementById("htmlconverter").innerHTML = '<textarea id="innerConverter">' + str + '</textarea>';
+		var content = document.getElementById("innerConverter").value;
+		document.getElementById("htmlconverter").innerHTML = "";
+		return content;
+	}
+}
+
+
+
 function supports_html5_storage() {
   try {
     return 'localStorage' in window && window['localStorage'] !== null;
@@ -59,12 +75,12 @@ var parseRSS = function(data, i){
 		var class2 = checkStrorage(hash);
 		var mois = date.getMonth() + 1;
 
-        tableau_articles.push({ 	"site" 			: 	el.parent().find("title").first().text(),
-        							"link"			: 	el.find("link").text(),
-        							"title"			: 	el.find("title").text(),
-        							"date"			: 	el.find("pubDate").text(),
-        							"date_humaine"	: 	date.getDate()+'/'+mois+'/'+date.getFullYear()+'  '+date.getHours()+':'+date.getMinutes(),
-        							"content"		: 	strip_tags(content,striptagsVar),
+        tableau_articles.push({ 	"site" 			: 	html_entity_decode(el.parent().find("title").first().text()),
+        							"link"			: 	html_entity_decode(el.find("link").text()),
+        							"title"			: 	html_entity_decode(el.find("title").text()),
+        							"date"			: 	html_entity_decode(el.find("pubDate").text()),
+        							"date_humaine"	: 	html_entity_decode(date.getDate()+'/'+mois+'/'+date.getFullYear()+'  '+date.getHours()+':'+date.getMinutes()),
+        							"content"		: 	strip_tags(html_entity_decode(content),striptagsVar),
         							"class"			: 	"rss"+i+' '+class2 ,
         							"hash"			: 	hash ,
         });
@@ -88,12 +104,12 @@ var parseATOM = function(data, i){
         var hash = md5(el.find("title").text()+el.find("updated").text()+el.find("link").text());
 		var class2 = checkStrorage(hash);
 
-        tableau_articles.push({ 	"site" 	: 	el.parent().find("title").first().text(),
-        							"link"	: 	el.find("link").text(),
-        							"title"	: 	el.find("title").text(),
+        tableau_articles.push({ 	"site" 	: 	html_entity_decode(el.parent().find("title").first().text()),
+        							"link"	: 	html_entity_decode(el.find("link").text()),
+        							"title"	: 	html_entity_decode(el.find("title").text()),
         							"date_humaine"	: 	date.getDate()+'/'+mois+'/'+date.getFullYear()+'  '+date.getHours()+':'+date.getMinutes(),
-        							"date"	: 	el.find("updated").text(),
-        							"content"	: content,
+        							"date"	: 	html_entity_decode(el.find("updated").text()),
+        							"content"	: html_entity_decode(content),
         							"class"		: "rss"+i+' '+class2 ,
         							"hash"		: hash ,
         });
