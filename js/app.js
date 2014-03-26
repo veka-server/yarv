@@ -249,7 +249,7 @@ var debut = function()
 
 	$.each(flux, function(key, value) {
 
-		$.get('?flux='+value, function (data) {
+		$.get('?flux='+encodeURIComponent(value), function (data) {
 
 		tableau_bouton[key.replace(/\W/g, '')] = '.rss'+i ;
 
