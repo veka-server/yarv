@@ -51,7 +51,6 @@
 <script type="text/javascript" src='js/lib/mustache.js'></script>
 <script type="text/javascript" src='js/lib/md5.js'></script>
 <script type="text/javascript" src='js/loader.js'></script>
-<script type="text/javascript" src='js/config.js'></script>
 <script type="text/javascript" src='js/app.js'></script>
 
 </body>

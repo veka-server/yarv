@@ -275,7 +275,16 @@ var tableau_bouton = {}; 	// tableau contenant les pairs clé:valeur utiles pour
 var striptagsVar = '<i><b><a><div><p><img><strong><h1><h2><h3><h5><h6><iframe>';
 var page_curr = 'article';
 
+var jours = 2;
 
-debut();
+$.getJSON('config.json', function(data) {
+
+    flux = data;
+
+	debut();
+
+});
+
+
 
 });
