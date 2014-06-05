@@ -100,12 +100,11 @@ var parseATOM = function(data, i){
         var content = strip_tags(el.find("content").text(),striptagsVar);
         if(!content){content = strip_tags(el.find("summary").text(),striptagsVar);}
 
-
         var hash = md5(el.find("title").text()+el.find("updated").text()+el.find("link").text());
 		var class2 = checkStrorage(hash);
 
         tableau_articles.push({ 	"site" 	: 	html_entity_decode(el.parent().find("title").first().text()),
-        							"link"	: 	html_entity_decode(el.find("link").text()),
+        							"link"	: 	html_entity_decode(el.find("link")[0].getAttribute('href')),
         							"title"	: 	html_entity_decode(el.find("title").text()),
         							"date_humaine"	: 	date.getDate()+'/'+mois+'/'+date.getFullYear()+'  '+date.getHours()+':'+date.getMinutes(),
         							"date"	: 	html_entity_decode(el.find("updated").text()),
