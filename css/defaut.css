@@ -190,3 +190,26 @@
 		vertical-align: middle;
 	}
 
+
+
+	.wp_syntax {
+		background: rgb(240,248,253);
+		border: 1px solid #D6E5EF;
+		white-space: pre;
+		font-size:12px;
+		line-height: 16px;
+		padding:5px;
+		color:rgba(0,0,0,0.7);
+		font-family: monospace !important;
+	}
+
+	blockquote {
+		background: rgb(240,248,253);
+		border: 1px solid #D6E5EF;
+		border-left:1px solid #C79C38;
+		padding:10px;
+		padding-left:20px;
+		color:rgba(0,0,0,0.7);
+		margin:10px;
+		font-size: 14px;
+	}

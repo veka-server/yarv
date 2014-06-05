@@ -6,6 +6,7 @@ $flux = json_decode(file_get_contents('config.json'), true);
 // proxy php pour recuperer les flux
 if(isset($_GET['flux']) && in_array($_GET['flux'], $flux))
 {
+
 	// Get that website's content
 	$handle = fopen($_GET['flux'], "r");
 
@@ -14,7 +15,12 @@ if(isset($_GET['flux']) && in_array($_GET['flux'], $flux))
 		$page = '';
 	    while (!feof($handle)) {
 	        $buffer = fgets($handle, 4096);
-	        $page .= str_replace('&', '&amp;', $buffer);
+	        $buffer = str_replace('&', '&amp;', $buffer);
+	        $buffer = nl2br($buffer);
+			$buffer = preg_replace('/[\x00-\x1F\x80-\x9F]/u', '', $buffer);
+	        $page .= str_replace('<br />', '
+', $buffer);
+
 	    }
 	    fclose($handle);
 	}
@@ -23,8 +29,9 @@ if(isset($_GET['flux']) && in_array($_GET['flux'], $flux))
 	{
 		// Set your return content type
 		header('Content-type: application/xml');
-		echo  $page;		
+	    echo($page);
 	}
 
 	die();
 }
+
