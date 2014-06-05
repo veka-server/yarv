@@ -125,7 +125,7 @@
 	.iframeOff {
 		width: 640px;
 		height: 360px;
-		background: rgb(0,0,0);
+		background: #506470;
 		margin: auto;
 		cursor:pointer;
 	}

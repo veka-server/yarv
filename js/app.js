@@ -75,8 +75,21 @@ var parseRSS = function(data, i){
 		var class2 = checkStrorage(hash);
 		var mois = date.getMonth() + 1;
 
+		var link = html_entity_decode(el.find("link").text());
+
+		if(link.indexOf('youtube.com') > -1)
+		{
+		    // Grab text
+		    var id = link.replace('http://www.youtube.com/watch?v=', '');
+		    id = id.replace('&feature=youtube_gdata', '');
+
+		    if(id != '') 
+			    var content = '<p style="text-align:center;"><iframe width="640" height="360" frameborder="0" allowfullscreen src="http://www.youtube.com/embed/'+id+'"/> </p>';
+		}
+
+
         tableau_articles.push({ 	"site" 			: 	html_entity_decode(el.parent().find("title").first().text()),
-        							"link"			: 	html_entity_decode(el.find("link").text()),
+        							"link"			: 	link,
         							"title"			: 	html_entity_decode(el.find("title").text()),
         							"date"			: 	html_entity_decode(el.find("pubDate").text()),
         							"date_humaine"	: 	html_entity_decode(date.getDate()+'/'+mois+'/'+date.getFullYear()+'  '+date.getHours()+':'+date.getMinutes()),
