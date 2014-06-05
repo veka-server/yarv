@@ -9,7 +9,7 @@
 			cursor: pointer;
 		}
 
-		article {
+		article, #empty {
 			padding:20px 20px;
 			margin:0% 2%;
 			border-bottom: 1px dotted #4399AD;
@@ -37,7 +37,7 @@
 			font-size:15px;
 		}
 
-		article a{
+		article a , #empty a{
 			color:#C79C38;
 		}
 

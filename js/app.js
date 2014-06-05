@@ -141,9 +141,14 @@ var goPage = function(afficherlu){
 	if(afficherlu != 1){
 		$('.lu').css('display','none');
 		$('#onlylu').html('Afficher les lus');
+
+		if($('.lu').length == $('article').length)
+			$('#empty').show();
+
 	}
 	else
 	{
+		$('#empty').hide();
 		$('#onlylu').html('Cacher les lus');
 	}
 }

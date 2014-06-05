@@ -38,6 +38,9 @@
 </nav>
 
 <div id="content" class="hidden">
+
+	<div id='empty' class="hidden">Vous avez lu tout les flux disponible.<br/> <a href="">Cliquez ici pour recharger les flux</a></div>
+
 	{{#articles}}
 		<article class='{{class}}'>
 			<h1>{{title}}</h1>
