@@ -234,6 +234,38 @@ var afficher = function(){
 
 	});
 
+	$('#alllu').click(function(){
+
+
+		if(!supports_html5_storage)return 0;
+
+		var i = 0;
+		$('article').each(function(){
+			i++;
+
+			$(this).removeClass(' lu');
+
+			var lu = JSON.parse(localStorage.getItem('lu'));
+			if(!lu) var lu = {};
+
+			// enregistre les donnée chez l'utilisateur
+			lu[$(this).find('.boutonLu')[0].id] = '1';
+			localStorage.setItem('lu', JSON.stringify(lu));
+
+			// ajoute la class lu
+			$(this).addClass(' lu');
+			
+			if ($('article').length == i)
+			goPage();
+
+		})
+
+
+
+
+
+	});
+
 	// affiche les articles et dissimule le loader
 	$('#content').show(function(){
 		$('#loaderImage').hide();

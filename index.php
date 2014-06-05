@@ -26,6 +26,7 @@
 	<h3>Options</h3>
 
 	<ul>
+		<li><a id="alllu">Marquer tout lu</a></li>
 		<li><a id="clean">Vider le cache</a></li>
 		<li><a id="onlylu"></a></li>
 	</ul>
