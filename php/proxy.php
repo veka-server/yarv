@@ -29,6 +29,9 @@ if(isset($_GET['flux']) && in_array($_GET['flux'], $flux))
 	{
 		// Set your return content type
 		header('Content-type: application/xml');
+
+		$page = str_replace("\n\n",'',$page);
+
 	    echo($page);
 	}
 

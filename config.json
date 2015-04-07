@@ -1,5 +1,4 @@
 {
-	"Gizmodo" : "http:\/\/www.gizmodo.fr\/feed",
 	"Korben":"http:\/\/feeds.feedburner.com\/KorbensBlog-UpgradeYourMind?format=xml",
 	"Webdesign":"http:\/\/feeds.feedburner.com\/blogduwebdesign\/articles?format=xml",
 	"Grafikart":"http:\/\/feeds.feedburner.com\/Grafikart?format=xml",
@@ -10,5 +9,10 @@
 	"Joueur du grenier":"http:\/\/gdata.youtube.com\/feeds\/base\/users\/joueurdugrenier\/uploads?alt=rss&v=2&orderby=published",
 	"Fanta bob game":"http:\/\/gdata.youtube.com\/feeds\/base\/users\/fantabobgames\/uploads?alt=rss&v=2&orderby=published",
 	"Fantasio974":"http:\/\/gdata.youtube.com\/feeds\/base\/users\/thefantasio974\/uploads?alt=rss&v=2&orderby=published",
-	"Golden mustache":"http:\/\/gdata.youtube.com\/feeds\/base\/users\/GoldenMoustacheVideo\/uploads?alt=rss&v=2&orderby=published"
+	"Golden mustache":"http:\/\/gdata.youtube.com\/feeds\/base\/users\/GoldenMoustacheVideo\/uploads?alt=rss&v=2&orderby=published",
+	"Presse citron":"http:\/\/www.presse-citron.net\/feed\/",
+	"BlogNT":"http:\/\/feeds.feedburner.com\/design-folio?format=xml",
+	"JoFisher":"http:\/\/feeds2.feedburner.com\/jofischer",
+	"JDG":"http:\/\/feeds2.feedburner.com\/LeJournalduGeek",
+	"Soat":"http:\/\/blog.soat.fr\/feed\/"
 }
