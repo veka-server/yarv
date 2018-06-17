@@ -1,18 +1,5 @@
 {
-	"Korben":"https:\/\/feeds.feedburner.com\/KorbensBlog-UpgradeYourMind?format=xml",
-	"Webdesign":"https:\/\/feeds.feedburner.com\/blogduwebdesign\/articles?format=xml",
-	"Grafikart":"https:\/\/feeds.feedburner.com\/Grafikart?format=xml",
-	"Antoine Daniel":"https:\/\/gdata.youtube.com\/feeds\/base\/users\/MrAntoineDaniel\/uploads?alt=rss&v=2&orderby=published",
-	"Salut les geek":"https:\/\/gdata.youtube.com\/feeds\/base\/users\/Salutlesgeeks\/uploads?alt=rss&v=2&orderby=published",
-	"Cyprien":"https:\/\/gdata.youtube.com\/feeds\/base\/users\/MonsieurDream\/uploads?alt=rss&v=2&orderby=published",
-	"Cyprien Gaming":"https:\/\/gdata.youtube.com\/feeds\/base\/users\/CyprienGaming\/uploads?alt=rss&v=2&orderby=published",
-	"Joueur du grenier":"https:\/\/gdata.youtube.com\/feeds\/base\/users\/joueurdugrenier\/uploads?alt=rss&v=2&orderby=published",
-	"Fanta bob game":"https:\/\/gdata.youtube.com\/feeds\/base\/users\/fantabobgames\/uploads?alt=rss&v=2&orderby=published",
-	"Fantasio974":"https:\/\/gdata.youtube.com\/feeds\/base\/users\/thefantasio974\/uploads?alt=rss&v=2&orderby=published",
-	"Golden mustache":"https:\/\/gdata.youtube.com\/feeds\/base\/users\/GoldenMoustacheVideo\/uploads?alt=rss&v=2&orderby=published",
-	"Presse citron":"https:\/\/www.presse-citron.net\/feed\/",
-	"BlogNT":"https:\/\/feeds.feedburner.com\/design-folio?format=xml",
-	"JoFisher":"https:\/\/feeds2.feedburner.com\/jofischer",
-	"JDG":"https:\/\/feeds2.feedburner.com\/LeJournalduGeek",
-	"Soat":"https:\/\/blog.soat.fr\/feed\/"
+  "Presse citron": "https:\/\/www.presse-citron.net\/feed\/",
+  "BlogNT": "https:\/\/feeds.feedburner.com\/design-folio?format=xml",
+  "JDG": "https:\/\/feeds2.feedburner.com\/LeJournalduGeek"
 }
